@@ -1,2 +1,2 @@
 # PyCalculator
-A calculator using PyQt5
+A calculator using PyQt5.
