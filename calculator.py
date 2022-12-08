@@ -1,6 +1,7 @@
 import sys
 
 from PyQt5.QtCore import QSize, Qt
+from PyQt5.QtGui import QFont
 from PyQt5.QtWidgets import QApplication, QMainWindow, QPushButton, QLabel
 
 from components.button import Button
@@ -55,8 +56,9 @@ class Calculator(QMainWindow):
 			btn['y']) for btn in FUNCTIONAL_BUTTONS
 		]
 		self.main_label = self._render_label('0', 50, 50)
+		self.main_label.setFont(QFont('Helvetica', 10))
 		self.setFixedWidth(500)
-		self.setFixedHeight(800)
+		self.setFixedHeight(600)
 
 	def add_value(self, text):
 		if text == 'C':
@@ -95,7 +97,7 @@ class Calculator(QMainWindow):
 
 	def _render_buttons(self, text, width, height, x, y):
 		button = QPushButton(text, self)
-		button.setStyleSheet('QPushButton {background-color: #A3C1DA; color: red;}')
+		button.setStyleSheet('QPushButton {background-color: #edfbff; color: black;}')
 		# button.setToolTip('This is an example button')
 		# setToolTip should only be returned if a flag its true
 		button.setFixedWidth(width)
